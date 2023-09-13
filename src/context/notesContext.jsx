@@ -19,7 +19,7 @@ const NotesContextProvider = ({children}) => {
             const notesArr = JSON.parse(wasmRef.current.getAllNotesAsString());
             setAllNotes(notesArr);
         }
-    }, [])
+    }, []);
 
     // Add Note Handler
     const addNoteHandler = useCallback(desc => {
@@ -27,19 +27,19 @@ const NotesContextProvider = ({children}) => {
             wasmRef.current.addNote(desc);
             updateUIStore();
         }
-    }, [updateUIStore])
+    }, [updateUIStore]);
 
     // Remove Note Handler
     const removeNoteHandler = useCallback((idx) => {
       wasmRef.current.removeNote(idx + 1);
       updateUIStore();
-    }, [updateUIStore])
+    }, [updateUIStore]);
 
     // Toggle Note Handler
     const toggleNoteHandler = useCallback((idx, status) => {
         wasmRef.current.toggleNote(idx + 1, status);
         updateUIStore();
-    }, [updateUIStore])
+    }, [updateUIStore]);
 
     useEffect(() => {
         // Notes's Class Constructor() is called
