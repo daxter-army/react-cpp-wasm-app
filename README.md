@@ -4,13 +4,13 @@
 
 * So as we all know __WebAssembly__ or __WASM__ is a new type of code that can be run in modern web browsers. We can use Low-Level languages like C/C++, Go, Rust etc, to compile them in binary format, that can be run alongwith JS in the browser. So I was also very much excited with the idea, so here is an implementation from my side, which implements a simple Todo App, using C++ at the back handling all the logic for CRUD regarding managing Todos, and at the front React is being used to communicate with C++ code (Classes and Objects) and displaying UI. App idea is simple, but I wanted to learn how this technology works, as this was my first WASM app/playground.
 
-## Prerequisites
+## 🚀 Prerequisites
 
-* __NodeJS__ > 16.x (By default, Emscripten uses its own version of NodeJS, but you can change this if you want to, I proceeded with the default version which is downloaded with emscripten. [Visit docs to learn more](https://emscripten.org/docs/getting_started/downloads.html#installation-instructions-using-the-emsdk-recommended))
-* __C++__ >= 11 (gcc/g++ vesion)
+* __NodeJS > 16.x__ (By default, Emscripten uses its own version of NodeJS, but you can change this if you want to, I proceeded with the default version which is downloaded with emscripten. [Visit docs to learn more](https://emscripten.org/docs/getting_started/downloads.html#installation-instructions-using-the-emsdk-recommended))
+* __C++ >= 11__ (gcc/g++ vesion)
 * __Emscripten (The tool which converts C++ code to wasm code)__ (Whichever is the latest stable version)
 
-## 🚇 Development Story
+## 🚇 Development
 
 ### 👔 C++ Logic Implementation
 
@@ -57,7 +57,7 @@
 
 * First you can develop C++ code and check that, everyting is working fine in main(), then you can go for building the code with emscripten.
 
-### Directory Notes
+### 🚦 Directory Notes
 
 * All C++ related code is in ```cpp_files```. When done, can use Emscripten to bundle these files
 * You can use compression flags like ```-O0```, ```-O1```, ```-O2```, ```-O3``` with ```emcc``` command to compress and minify your wasm and JS glue files.
@@ -71,5 +71,5 @@
 * [Compiling a New C/C++ Module to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm#creating_html_and_javascript)
 * [StackOverflow: Call C++ Classes in Emscripten](https://stackoverflow.com/questions/15865923/interaction-with-c-classes-in-emscripten)
 
-> [!NOTE]
-> I have tried my best to explain, but the explainations provided above are based upon my understanding, and thus there is a scope of verifying the above knowledge from the docs.
+<!-- > [!NOTE]
+> I have tried my best to explain, but the explainations provided in the __C++ & WASM Bundling using Emscripten__ section above, are based upon my understanding, and thus there is a scope of verifying the above knowledge from the docs. -->
