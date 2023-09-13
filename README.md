@@ -5,11 +5,13 @@
 * So as we all know __WebAssembly__ or __WASM__ is a new type of code that can be run in modern web browsers. We can use Low-Level languages like C/C++, Go, Rust etc, to compile them in binary format, that can be run alongwith JS in the browser. So I was also very much excited with the idea, so here is an implementation from my side, which implements a simple Todo App, using C++ at the back handling all the logic for CRUD regarding managing Todos, and at the front React is being used to communicate with C++ code (Classes and Objects) and displaying UI. App idea is simple, but I wanted to learn how this technology works, as this was my first WASM app/playground.
 
 ## Prerequisites
+
 * __NodeJS__ > 16.x (By default, Emscripten uses its own version of NodeJS, but you can change this if you want to, I proceeded with the default version which is downloaded with emscripten. [Visit docs to learn more](https://emscripten.org/docs/getting_started/downloads.html#installation-instructions-using-the-emsdk-recommended))
 * __C++__ >= 11 (gcc/g++ vesion)
 * __Emscripten (The tool which converts C++ code to wasm code)__ (Whichever is the latest stable version)
 
 ## 🚇 Development Story
+
 ### 👔 C++ Logic Implementation
 
 * ```note.cpp```: Contains implementation regarding an individual ```Note```, which hosts to private member variables the following attributes:
@@ -26,6 +28,7 @@
 * ```main.cpp```: Contains main() driver code for Notes Classes, which is not doing much, but acting as an entry point.
 
 ### 🏋️ C++ & WASM Bundling using Emscripten
+
 * Our main goal is to call the __public member functions__ defined in ```Notes`` class from our JS code.
 * __EMSCRIPTEN_BINDINGS__ is used to bind C++ classes, so that they are available to call from JS. You can choose what function to expose or not, and it will also affect your bundle size. More functions will result in increased bundle size.
 * ```#define EXTERN extern "C"``` is used to avoid [__Name Mangling__](https://www.ibm.com/docs/en/i/7.5?topic=linkage-name-mangling-c-only).
@@ -36,6 +39,7 @@
     4. ```"EXPORTED_RUNTIME_METHODS=['ccall']"```: The method that we use to call C++ code, other method is ```cwrap()```.
 
 ### 🦺 WASM Integration with React App
+
 * A Module object is attached to the ```window``` object, and therefore we can refer to our wasm module at ```window.Module```
 * We can initialise our Class's instance like this ```var instance = new windowm.Module.Notes()```.
 * Above line will initialize an object of type ```Notes```, which is saved in ```instance``` variable.
@@ -44,7 +48,8 @@
 
 ## ⛓️ Local Development Setup
 
-### 🛠️ Development Workflow I folloed
+### 🛠️ Development Workflow I followed
+
 1. Write C++ code ⤵
 2. Bundle the Code with Emscripten ⤵
 3. Copy the 2 output files ```/cpp_files/<file_name>.js```, ```/cpp_files/<file_name>.wasm``` to ```/wasm``` ⤵
@@ -52,7 +57,16 @@
 
 * First you can develop C++ code and check that, everyting is working fine in main(), then you can go for building the code with emscripten.
 
+### Directory Notes
+
+* All C++ related code is in ```cpp_files```. When done, can use Emscripten to bundle these files
+* You can use compression flags like ```-O0```, ```-O1```, ```-O2```, ```-O3``` with ```emcc``` command to compress and minify your wasm and JS glue files.
+* Parent Directory houses the React client code
+* Open terminal at the parent Directory and hit ```npm run dev``` and your code is live at ```http://localhost:5173```
+* hit ```npm run build``` to create production build of React app.
+
 ## 🍀 Resources
+
 * [Emscripten: Connecting Cpp and JS](https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#interacting-with-code-ccall-cwrap)
 * [Compiling a New C/C++ Module to WebAssembly](https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm#creating_html_and_javascript)
 * [StackOverflow: Call C++ Classes in Emscripten](https://stackoverflow.com/questions/15865923/interaction-with-c-classes-in-emscripten)
