@@ -1,0 +1,28 @@
+.noteWpr {
+    display: flex;
+    padding: 8px 10px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 4px;
+    background-color: #eef1f3;
+    margin-bottom: 16px;
+
+    .noteLabel {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .noteLabel .isDone {
+        text-decoration: line-through;
+    }
+}
+
+.noteWpr.isCompleted {
+    background-color: #AFDBF5;
+}
+
+.noteWpr:last-child {
+    margin-bottom: unset;
+}

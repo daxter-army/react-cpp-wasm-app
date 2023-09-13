@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body, a, button, input {
+  font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  #root {
+    align-items: flex-start;
+  }
+}

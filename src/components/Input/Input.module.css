@@ -1,0 +1,12 @@
+.inputWpr {
+    flex: 1;
+    padding: 6px 8px;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+    .inputWpr {
+        flex: unset;
+        width: 70%;
+    }
+}

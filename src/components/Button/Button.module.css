@@ -1,0 +1,47 @@
+.buttonWpr {
+    display: flex;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    transition: 0.1s;
+    border: none;
+}
+
+.buttonWpr.disabledBtn {
+    cursor: default;
+}
+
+.buttonWpr.disabledBtn:hover {
+    background-color: transparent;
+}
+
+.buttonWpr.addBtn:hover {
+    background-color: #B0FC38;
+}
+
+.buttonWpr.deleteBtn:hover {
+    background-color: #FC7676;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .buttonWpr {
+        transition: unset;
+    }
+
+    .buttonWpr.addBtn:hover, .buttonWpr.deleteBtn:hover {
+        background-color: transparent;
+    }
+
+    .buttonWpr.addBtn:active {
+        background-color: #B0FC38;
+    }
+
+    .buttonWpr.deleteBtn:active {
+        background-color: #FC7676;
+    }
+}
+  
