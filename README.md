@@ -25,11 +25,11 @@
 
 * ```notes.cpp```: Contains implementation of ```vector<Note*> notes```, which acts as an array to hold todos in it. Just like the way we put todos in an array in JS, and then manipulate it. The ```Notes``` class contains the CRUD functionality for altering todos at its side.
 
-* ```main.cpp```: Contains ```main()``` driver code for Notes Classes, which is not doing much, but acting as an entry point.
+* ```main.cpp```: Contains ```main()``` driver code for Notes class, which is not doing much, but acting as an entry point.
 
 ### 🏋️ C++ & WASM Bundling using Emscripten
 
-* Our main goal is to call the __public member functions__ defined in ```Notes`` class from our JS code.
+* Our main aim is to call the __public member functions__ defined in ```Notes``` class from our JS code.
 * __EMSCRIPTEN_BINDINGS__ is used to bind C++ classes, so that they are available to call from JS. You can choose what function to expose or not, and it will also affect your bundle size. More functions will result in increased bundle size.
 * ```#define EXTERN extern "C"``` is used to avoid [__Name Mangling__](https://www.ibm.com/docs/en/i/7.5?topic=linkage-name-mangling-c-only).
 * Build Command: ```emcc -lembind -o wasm.js main.cpp -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"```
@@ -41,7 +41,7 @@
 ### 🦺 WASM Integration with React App
 
 * A Module object is attached to the ```window``` object, and therefore we can refer to our wasm module at ```window.Module```
-* We can initialise our Class's instance like this ```var instance = new windowm.Module.Notes()```.
+* We can initialise our class's instance like this ```var instance = new windowm.Module.Notes()```.
 * Above line will initialize an object of type ```Notes```, which is saved in ```instance``` variable.
 * We can call ```Notes -> add("Learn WASM!")``` like this ```instance.add("Learn WASM!")``` here and so on.
 * Further ```NotesContext``` and ```WASMContext``` are used in the React App to handle and distribute data among the whole app.
