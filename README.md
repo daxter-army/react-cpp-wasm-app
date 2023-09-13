@@ -25,7 +25,7 @@
 
 * ```notes.cpp```: Contains implementation of ```vector<Note*> notes```, which acts as an array to hold todos in it. Just like the way we put todos in an array in JS, and then manipulate it. The ```Notes``` class contains the CRUD functionality for altering todos at its side.
 
-* ```main.cpp```: Contains main() driver code for Notes Classes, which is not doing much, but acting as an entry point.
+* ```main.cpp```: Contains ```main()`` driver code for Notes Classes, which is not doing much, but acting as an entry point.
 
 ### 🏋️ C++ & WASM Bundling using Emscripten
 
