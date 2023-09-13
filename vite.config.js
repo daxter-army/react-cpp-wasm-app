@@ -15,7 +15,8 @@ export default defineConfig({
     },
   },
   plugins: [react()],
+  base: "/react-cpp-wasm-app",
   build: {
-    outDir: 'docs',
+    outDir: 'dist',
   },
 })
