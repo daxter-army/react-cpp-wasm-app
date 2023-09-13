@@ -1,4 +1,4 @@
-# <img width=26 align="center" src="./readme-media/react.svg" /> React + <img align="center" width=26 src="./readme-media/cpp.svg" /> Cpp + <img align="center" width=26 src="./readme-media/wasm.svg" /> WASM Todo App
+# <img width=32 align="center" src="./readme-media/react.svg" /> React + <img align="center" width=32 src="./readme-media/cpp.svg" /> Cpp + <img align="center" width=28 src="./readme-media/wasm.svg" /> WASM Todo App
 
 ## 💡 Idea
 
