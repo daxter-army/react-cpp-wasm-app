@@ -7,7 +7,7 @@
 ## 🚀 Prerequisites
 
 * __NodeJS > 16.x__ (By default, Emscripten uses its own version of NodeJS, but you can change this if you want to, I proceeded with the default version which is downloaded with emscripten. [Visit docs to learn more](https://emscripten.org/docs/getting_started/downloads.html#installation-instructions-using-the-emsdk-recommended))
-* __C++ >= 11__ (gcc/g++ vesion)
+* __C++ >= 11__ (gcc/g++ version)
 * __Emscripten (The tool which converts C++ code to wasm code)__ (Whichever is the latest stable version)
 
 ## 🚇 Development
