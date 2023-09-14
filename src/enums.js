@@ -1,5 +1,5 @@
 export const ENUMS = {
-    GITHUB_LINK: 'https://www.github.com/react-cpp-wasm-app',
+    GITHUB_LINK: 'https://www.github.com/daxter-army/react-cpp-wasm-app',
     AUTHOR_LABEL: 'react-cpp-wasm-app | @daxter-army',
     APP_TITLE: 'Notes',
     SEARCH_PLACEHOLDER: `What's on your mind?`,
