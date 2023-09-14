@@ -1,5 +1,7 @@
 # React + Cpp + WASM Todo App
 
+<p align="center"><img src="https://github.com/daxter-army/react-cpp-wasm-app/assets/49727032/a02fc5d3-3285-4cff-98d7-222f49bd38f5" alt="app-ui" /></p>
+
 ## 💡 Idea
 
 * So as we all know __WebAssembly__ or __WASM__ is a new type of code that can be run in modern web browsers. We can use Low-Level languages like C/C++, Go, Rust etc, to compile them in binary format, that can be run alongwith JS in the browser. So I was also very much excited with the idea, so here is an implementation from my side, which implements a simple Todo App, using C++ at the back handling all the logic for CRUD regarding managing Todos, and at the front React is being used to communicate with C++ code (Classes and Objects) and displaying UI. App idea is simple, but I wanted to learn how this technology works, as this was my first WASM app/playground.
