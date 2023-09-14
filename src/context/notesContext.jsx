@@ -50,11 +50,15 @@ const NotesContextProvider = ({children}) => {
         wasmRef.current = new wasm.Notes();
 
         // Dummy Tasks
+        addTodoHandler("Create a React and WASM app");
+        toggleTodoHandler(0, true);
+        addTodoHandler("Learn more about WebAssembly");
+        
         // wasmRef.current.addNote("Create a react-wasm app");
         // wasmRef.current.addNote("Drink enough water");
 
         // Calling Class's member function()
-        updateUIStore();
+        // updateUIStore();
     }, [wasm, updateUIStore])
 
     const store = {
