@@ -22,11 +22,11 @@ export default defineConfig({
       targets: [
         {
           src: 'wasm/wasm.js',
-          dest: 'assets/wasm'
+          dest: 'wasm'
         },
         {
           src: 'wasm/wasm.wasm',
-          dest: 'assets/wasm'
+          dest: 'wasm'
         },
         {
           src: '.gitignore',
