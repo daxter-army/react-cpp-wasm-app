@@ -5,5 +5,6 @@ export const ENUMS = {
     SEARCH_PLACEHOLDER: `What's on your mind?`,
     NO_PENDING_TASKS: 'No pending Tasks',
     ADD_NOTE: 'ADD_NOTE',
-    DELETE_NOTE: 'DELETE_NOTE'
+    DELETE_NOTE: 'DELETE_NOTE',
+    IS_WASM_LOADED_INTERVAL_TIME: 500
 }

@@ -35,10 +35,9 @@ export default defineConfig({
       ]
     })
   ],
-  // Comment base, when developing,
   // or you can run your app at the below mentioned base url
   base: "/react-cpp-wasm-app",
-  // build: {
-  //   outDir: 'dist',
-  // },
+  build: {
+    outDir: 'docs',
+  },
 })

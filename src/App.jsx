@@ -13,8 +13,13 @@ import { ENUMS } from './enums';
 import styles from './App.module.css';
 
 function App() {
-  const { addNoteHandler } = useNotes();
+  const { addTodoHandler } = useNotes();
   const [ value, setValue ] = useState("");
+
+  const addTodoButtonHandler = () => {
+    setValue("");
+    addTodoHandler(value);
+  }
 
   return (
     <div className={styles.appWpr}>
@@ -27,8 +32,8 @@ function App() {
           <Input value={value} setValue={setValue} placeholder={ENUMS.SEARCH_PLACEHOLDER} />
           <Button
             variant={ENUMS.ADD_NOTE}
+            onClick={addTodoButtonHandler}
             isDisabled={value.length === 0}
-            onClick={() => addNoteHandler(value)}
           >
             <PiNotePencilLight size={30} />
           </Button>

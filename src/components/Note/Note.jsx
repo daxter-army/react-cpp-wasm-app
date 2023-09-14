@@ -11,15 +11,15 @@ import { ENUMS } from '../../enums';
 import styles from './Note.module.css'
 
 const Note = ({note, idx}) => {
-  const { removeNoteHandler, toggleNoteHandler } = useNotes();
+  const { removeTodoHandler, toggleTodoHandler } = useNotes();
 
   const onNoteClick = (idx) => {
-    toggleNoteHandler(idx, !note.status)
+    toggleTodoHandler(idx, !note.status)
   }
 
   const deleteButtonHandler = (e, idx) => {
     e.stopPropagation();
-    removeNoteHandler(idx);
+    removeTodoHandler(idx);
   }
 
   return (
