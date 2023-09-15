@@ -31,6 +31,7 @@ function App() {
         <div className={styles.headingWpr}>
           <Input value={value} setValue={setValue} placeholder={ENUMS.SEARCH_PLACEHOLDER} />
           <Button
+            ariaLabel="Add Todo"
             variant={ENUMS.ADD_NOTE}
             onClick={addTodoButtonHandler}
             isDisabled={value.length === 0}

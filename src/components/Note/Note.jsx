@@ -25,10 +25,10 @@ const Note = ({note, idx}) => {
   return (
     <div onClick={() => onNoteClick(idx)} className={`${styles.noteWpr} ${note.status ? styles.isCompleted : ''}`}>
       <div className={styles.noteLabel}>
-        <Checkbox isChecked={note.status} onChange={() => onNoteClick(idx)} />
+        <Checkbox ariaLabel={'Toggle done/undone Todo'} isChecked={note.status} onChange={() => onNoteClick(idx)} />
         <span className={note.status ? styles.isDone : ''}>{note?.description}</span>
       </div>
-      <Button variant={ENUMS.DELETE_NOTE} onClick={(e) => deleteButtonHandler(e, idx)}>
+      <Button ariaLabel="Remove Todo" variant={ENUMS.DELETE_NOTE} onClick={(e) => deleteButtonHandler(e, idx)}>
         <PiTrashLight size={25} />
       </Button>
     </div>
