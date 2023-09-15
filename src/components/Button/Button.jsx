@@ -11,10 +11,10 @@ const Button = ({ variant, children, onClick, isDisabled = false, ariaLabel = "b
   
   return (
     <button
-      ariaLabel={ariaLabel}
+      onClick={onClick}
+      aria-label={ariaLabel}
       disabled={isDisabled}
       className={`${styles.buttonWpr} ${isDisabled ? buttonStyles.DISABLED : buttonStyles[variant]}`}
-      onClick={onClick}
     >
       {children}
     </button>
