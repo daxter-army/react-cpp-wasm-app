@@ -53,18 +53,18 @@
 ### 🛠️ Development Workflow I followed
 
 1. Write C++ code ⤵
-2. Bundle the Code with Emscripten ⤵
+2. Bundle the code with __Emscripten__ ⤵
 3. Copy the 2 output files ```/cpp_files/<file_name>.js```, ```/cpp_files/<file_name>.wasm``` to ```/wasm``` ⤵
 4. Adjust the imports in ```index.html``` (If you have changed file names)
 
-* First you can develop C++ code and check that, everyting is working fine in main(), then you can go for building the code with emscripten.
+* First you can develop C++ code and check that, everyting is working fine with your C++ code, then you can go for building the code with Emscripten.
 
 ### 🚦 Directory Notes
 
-* All C++ related code is in ```cpp_files```. When done, can use Emscripten to bundle these files
+* All C++ related code is in ```cpp_files```. When done, can use Emscripten to bundle these files.
 * You can use compression flags like ```-O0```, ```-O1```, ```-O2```, ```-O3``` with ```emcc``` command to compress and minify your wasm and JS glue files.
-* Parent Directory houses the React client code
-* Open terminal at the parent Directory and hit ```npm run dev``` and your code is live at ```http://localhost:5173```
+* Parent Directory houses the React client code.
+* Open terminal at the parent Directory and hit ```npm run dev``` and your code is live at ```http://localhost:5173```.
 * hit ```npm run build``` to create production build of React app.
 
 ## 🍀 Resources
